@@ -1,0 +1,16 @@
+apiVersion: V1
+kind: Pod
+metadata:
+  name: busybox
+  namespace: anthos-vk-demo
+  lables:
+    app: busybox
+spec:
+  containers:
+  - image: busybox
+    command:
+      - sleep
+      - "3600"
+    imagePullPolicy: IfNotPresent
+    name: busyybox
+  restartPolicy: Always
