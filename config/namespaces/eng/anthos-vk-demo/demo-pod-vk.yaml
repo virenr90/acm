@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: busybox
+  name: busybox-vk
   namespace: anthos-vk-demo
   labels:
     app: busybox
