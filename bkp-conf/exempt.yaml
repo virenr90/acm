@@ -1,0 +1,11 @@
+kind: NamespaceSelector
+ apiVersion: configmanagement.gke.io/v1
+ metadata:
+   name: excludes-exempt-namespaces
+ spec:
+   selector:
+     matchExpressions:
+       - key: quota-exempt
+         operator: NotIn
+          values:
+            - exempt
