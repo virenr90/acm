@@ -1,102 +1,137 @@
 ---
-# Source: demo/templates/serviceaccount.yaml
+# Source: kashti/templates/serviceaccount.yaml
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: vkdemo
+  name: vkkashti
   labels:
-    helm.sh/chart: demo-0.1.0
-    app.kubernetes.io/name: demo
-    app.kubernetes.io/instance: vk
-    app.kubernetes.io/version: "1.16.0"
-    app.kubernetes.io/managed-by: Helm
+    app: kashti
+    chart: kashti-0.6.0
+    release: vk
+    heritage: Helm
+imagePullSecrets:
 ---
-# Source: demo/templates/service.yaml
+# Source: kashti/templates/js-configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vkkashti-js
+  labels:
+    chart: kashti-0.6.0
+    release: "vk"
+    heritage: Helm
+data:
+  "settings.js": |-
+    var brigadeApiURL = '//' + location.host; 'http://vkbrigade-api:7745';
+    // End
+---
+# Source: kashti/templates/nginx-configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vkkashti-nginx
+  labels:
+    chart: kashti-0.6.0
+    release: "vk"
+    heritage: Helm
+data:
+  "default.conf": |-
+      server {
+          listen       80;
+          server_name  localhost;
+
+          # Proxy to API server
+          location /v1/ {
+              proxy_pass http://vkbrigade-api:7745/v1/;
+          }
+
+          location / {
+              root   /usr/share/nginx/html;
+              index  index.html index.htm;
+              try_files $uri $uri/ /index.html;
+          }
+          
+          error_page   500 502 503 504  /50x.html;
+          location = /50x.html {
+              root   /usr/share/nginx/html;
+          }
+      }
+---
+# Source: kashti/templates/service.yaml
 apiVersion: v1
 kind: Service
 metadata:
-  name: vkdemo
+  name: vkkashti
   labels:
-    helm.sh/chart: demo-0.1.0
-    app.kubernetes.io/name: demo
-    app.kubernetes.io/instance: vk
-    app.kubernetes.io/version: "1.16.0"
-    app.kubernetes.io/managed-by: Helm
+    app: kashti
+    chart: kashti-0.6.0
+    release: vk
+    heritage: Helm
 spec:
   type: ClusterIP
   ports:
     - port: 80
-      targetPort: http
+      targetPort: 80
       protocol: TCP
-      name: http
+      name: kashti
   selector:
-    app.kubernetes.io/name: demo
-    app.kubernetes.io/instance: vk
+    app: kashti
+    release: vk
 ---
-# Source: demo/templates/deployment.yaml
+# Source: kashti/templates/deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vkdemo
+  name: vkkashti
   labels:
-    helm.sh/chart: demo-0.1.0
-    app.kubernetes.io/name: demo
-    app.kubernetes.io/instance: vk
-    app.kubernetes.io/version: "1.16.0"
-    app.kubernetes.io/managed-by: Helm
+    app: kashti
+    chart: kashti-0.6.0
+    release: vk
+    heritage: Helm
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/name: demo
-      app.kubernetes.io/instance: vk
+        app: kashti
+        release: vk
   template:
     metadata:
+      annotations:
+        checksum/config-js: 1181b56823ffd00f877c53154912fed0aad1f7635bd6ac67f3c4949d390d9492
+        checksum/config-nginx: dccdf5c67f3e6b1437be2360e6e1a38bf1b63270be82d12f9a8a532f6a162c94
       labels:
-        app.kubernetes.io/name: demo
-        app.kubernetes.io/instance: vk
+        app: kashti
+        release: vk
     spec:
-      serviceAccountName: vkdemo
-      securityContext:
-        {}
+      serviceAccountName: vkkashti
       containers:
-        - name: demo
-          securityContext:
-            {}
-          image: "nginx:1.16.0"
+        - name: kashti
+          image: "brigadecore/kashti:v0.4.0"
           imagePullPolicy: IfNotPresent
           ports:
-            - name: http
-              containerPort: 80
-              protocol: TCP
+            - containerPort: 80
           livenessProbe:
             httpGet:
               path: /
-              port: http
+              port: 80
           readinessProbe:
             httpGet:
               path: /
-              port: http
+              port: 80
+          volumeMounts:
+            - name: config-js
+              mountPath: /usr/share/nginx/html/assets/js/settings
+            - name: config-nginx
+              mountPath: /etc/nginx/conf.d
           resources:
-            {}
----
-# Source: demo/templates/tests/test-connection.yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: "vkdemo-test-connection"
-  labels:
-    helm.sh/chart: demo-0.1.0
-    app.kubernetes.io/name: demo
-    app.kubernetes.io/instance: vk
-    app.kubernetes.io/version: "1.16.0"
-    app.kubernetes.io/managed-by: Helm
-  annotations:
-    "helm.sh/hook": test
-spec:
-  containers:
-    - name: wget
-      image: busybox
-      command: ['wget']
-      args: ['vkdemo:80']
-  restartPolicy: Never
+            limits: {}
+            requests:
+              cpu: 300m
+              memory: 512Mi
+      volumes:
+        - name: config-js
+          configMap:
+            name: vkkashti-js
+        - name: config-nginx
+          configMap:
+            name: vkkashti-nginx
