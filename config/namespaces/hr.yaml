@@ -107,4 +107,7 @@ spec:
     command:
     - apt-get update
     - apt-get install wget
+    volumeMounts:
+    - name: workdir
+      mountPath: "/work-dir"
 
