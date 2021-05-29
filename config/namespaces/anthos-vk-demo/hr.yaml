@@ -102,17 +102,6 @@ spec:
   restartPolicy: Never
   
   initContainers:
-  - name: install
+  - name: init-install
     image: busybox
-    command:
-    - wget
-    - "-O"
-    - "/work-dir/index.html"
-    - http://info.cern.ch
-    volumeMounts:
-    - name: workdir
-      mountPath: "/work-dir"
-  dnsPolicy: Default
-  volumes:
-  - name: workdir
-    emptyDir: {}
+    command: ['sh', '-c', 'until nslookup myservice; do echo waiting for myservice; sleep 2; done;']
