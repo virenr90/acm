@@ -104,4 +104,4 @@ spec:
   initContainers:
   - name: init-install
     image: busybox
-    command: ['sh', '-c', 'apt-get update']
+    command: ['sh', 'apt-get update']
