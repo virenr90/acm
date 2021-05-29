@@ -100,13 +100,12 @@ spec:
       command: ['wget']
       args: ['hr-test:80']
   restartPolicy: Never
-
   initContainers:
   - name: install
     image: busybox
     command:
-    - apt-get update
-    - apt-get install wget
+    - apt-get install
+    - wget
     volumeMounts:
     - name: workdir
       mountPath: "/work-dir"
@@ -114,3 +113,4 @@ spec:
   volumes:
   - name: workdir
     emptyDir: {}
+
