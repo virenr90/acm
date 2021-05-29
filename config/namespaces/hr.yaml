@@ -95,7 +95,7 @@ metadata:
     "helm.sh/hook": test
 spec:
   containers:
-    - name: install_wget
+    - name: install-wget
       command: ['apt-get install wget']
     - name: wget
       image: busybox
