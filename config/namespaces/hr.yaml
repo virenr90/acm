@@ -97,7 +97,8 @@ spec:
   containers:
     - name: install-wget
       image: busybox
-      command: ['apt-get install wget']
+      command: ['apt-get install']
+      args: ['wget']
     - name: wget
       image: busybox
       command: ['wget']
