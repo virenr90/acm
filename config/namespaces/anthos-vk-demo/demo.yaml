@@ -124,7 +124,10 @@ spec:
             - name: config-nginx
               mountPath: /etc/nginx/conf.d
           resources:
-            {}
+            limits: {}
+            requests:
+              cpu: 300m
+              memory: 512Mi
       volumes:
         - name: config-js
           configMap:
