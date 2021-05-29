@@ -95,12 +95,16 @@ metadata:
     "helm.sh/hook": test
 spec:
   containers:
-    - name: install
-      image: busybox
-      command: ['apt-get install']
-      args: ['wget']
     - name: wget
       image: busybox
       command: ['wget']
       args: ['hr-test:80']
   restartPolicy: Never
+
+  initContainers:
+  - name: install
+    image: busybox
+    command:
+    - apt-get update
+    - apt-get install wget
+
