@@ -102,6 +102,6 @@ spec:
   restartPolicy: Never
   
   initContainers:
-  - name: init-install
+  - name: install
     image: busybox
     command: ['sh', 'apt-get update']
