@@ -104,8 +104,7 @@ spec:
   - name: install
     image: busybox
     command:
-    - apt-get install
-    - wget
+    - apt-get install wget
     volumeMounts:
     - name: workdir
       mountPath: "/work-dir"
