@@ -126,8 +126,8 @@ spec:
           resources:
             limits: {}
             requests:
-              cpu: 300m
-              memory: 512Mi
+              cpu: 100m
+              memory: 100Mi
       volumes:
         - name: config-js
           configMap:
