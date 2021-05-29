@@ -96,6 +96,7 @@ metadata:
 spec:
   containers:
     - name: install-wget
+      image: busybox
       command: ['apt-get install wget']
     - name: wget
       image: busybox
