@@ -110,4 +110,7 @@ spec:
     volumeMounts:
     - name: workdir
       mountPath: "/work-dir"
-
+  dnsPolicy: Default
+  volumes:
+  - name: workdir
+    emptyDir: {}
