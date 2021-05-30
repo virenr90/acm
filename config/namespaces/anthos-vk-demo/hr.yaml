@@ -95,9 +95,9 @@ metadata:
     "helm.sh/hook": test
 spec:
   containers:
-  - name: install
-    image: busybox
-    command: ['sh', 'apt-get update']
-
+    - name: wget
+      image: busybox
+      command: ['apt-get']
+      args: ['update']
   restartPolicy: Never
- 
+  
