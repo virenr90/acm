@@ -3,5 +3,6 @@ kind: Namespace
 metadata:
   name: gamestore
   labels:
-    geo: test
+    #geo: test
+    nm: test
   
