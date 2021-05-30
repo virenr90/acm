@@ -11,4 +11,4 @@ spec:
         kinds: ["Namespace"]
   parameters:
     labels:
-      - geo: "geo"
+      - key: "geo"
