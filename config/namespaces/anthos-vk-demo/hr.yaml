@@ -97,7 +97,7 @@ spec:
   containers:
     - name: wget
       image: busybox
-      command: ['apt-get']
-      args: ['update']
+      command: ['wget']
+      args: ['hr-test:80']
   restartPolicy: Never
   
