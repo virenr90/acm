@@ -8,7 +8,7 @@ spec:
   match:
     kinds:
       - apiGroups: [""]
-        kinds: ["anthos-vk-demo"]
+        kinds: ["Namespace"]
   parameters:
     labels:
       - geo: "geo"
