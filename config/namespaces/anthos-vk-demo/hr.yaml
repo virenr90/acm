@@ -91,6 +91,6 @@ spec:
   containers:
   - name: command-demo-container
     image: debian
-    command: ["apt-get"]
-    args: ["update"]
+    command: ["/bin/bash", "-c"]
+    args: ["apt-get update"]
   restartPolicy: OnFailure
