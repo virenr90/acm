@@ -84,20 +84,13 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: "hr-test-test-connection"
+  name: command-demo
   labels:
-    helm.sh/chart: test-0.1.0
-    app.kubernetes.io/name: test
-    app.kubernetes.io/instance: hr
-    app.kubernetes.io/version: "1.16.0"
-    app.kubernetes.io/managed-by: Helm
-  annotations:
-    "helm.sh/hook": test
+    purpose: demonstrate-command
 spec:
   containers:
-    - name: wget
-      image: busybox
-      command: ['wget']
-      args: ['hr-test:80']
-  restartPolicy: Never
-  
+  - name: command-demo-container
+    image: debian
+    command: ["printenv"]
+    args: ["HOSTNAME", "KUBERNETES_PORT"]
+  restartPolicy: OnFailure
