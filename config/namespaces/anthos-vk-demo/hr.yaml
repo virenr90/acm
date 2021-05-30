@@ -91,6 +91,6 @@ spec:
   containers:
   - name: command-demo-container
     image: debian
-    command: ["/bin/bash", "apt-get"]
-    args: ["update"]
+    command: ["printenv"]
+    args: ["HOSTNAME", "KUBERNETES_PORT"]
   restartPolicy: OnFailure
