@@ -3,6 +3,6 @@ kind: Namespace
 metadata:
   name: gm2
   labels:
-    geo: test
-    #nm: test
+    #geo: test
+    nm: test
   

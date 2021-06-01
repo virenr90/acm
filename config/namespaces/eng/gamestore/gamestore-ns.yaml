@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: gm2
+  name: gamestore
   labels:
     #geo: test
     nm: test
