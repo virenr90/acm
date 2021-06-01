@@ -4,5 +4,5 @@ metadata:
   name: gamestore
   labels:
     #geo: test
-    nm: test
+    #nm: test
   
