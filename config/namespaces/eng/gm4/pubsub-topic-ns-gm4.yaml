@@ -4,3 +4,4 @@
     labels:
       environment: dev
     name: gcp-pub-gm4
+    namespace: gm4
