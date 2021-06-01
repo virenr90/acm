@@ -3,4 +3,4 @@
   metadata:
     labels:
       environment: dev
-    name: vk-pub-topic
+    name: vk-pub-game
