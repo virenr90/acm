@@ -3,4 +3,4 @@
   metadata:
     labels:
       environment: dev
-    name: pub_topic
+    name: vk-pub-topic
