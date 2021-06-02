@@ -5,4 +5,4 @@
       cnrm.cloud.google.com/project-id: anthos-313604
     labels:
       environment: dev
-    name: vk-pubg
+    name: game-resource-anots

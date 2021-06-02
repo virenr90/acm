@@ -3,5 +3,5 @@
   metadata:
     labels:
       environment: dev
-    name: gcp-pub-gm4
+    name: pub-ns-anots
     namespace: gm4

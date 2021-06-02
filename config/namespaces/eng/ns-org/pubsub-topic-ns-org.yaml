@@ -3,5 +3,5 @@
   metadata:
     labels:
       environment: dev
-    name: gm2-ns-anots
-    namespace: gm2
+    name: pub-org-anots
+    namespace: ns-org
