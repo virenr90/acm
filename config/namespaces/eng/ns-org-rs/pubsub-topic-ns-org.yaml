@@ -1,11 +1,11 @@
   apiVersion: pubsub.cnrm.cloud.google.com/v1beta1
   kind: PubSubTopic
   metadata:
+    project: anthos-313604
     annotations:
       cnrm.cloud.google.com/organization-id: "808008667013"
     labels:
       environment: dev
     name: org-ns-rs-anots
-    project-id: anthos-313604
     namespace: ns-org-rs
    
