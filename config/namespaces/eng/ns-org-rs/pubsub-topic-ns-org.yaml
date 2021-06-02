@@ -7,5 +7,5 @@
     labels:
       environment: dev
     name: org-ns-rs-anots
-    #namespace: ns-org-rs
+    namespace: ns-org-rs
    
