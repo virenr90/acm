@@ -3,5 +3,5 @@
   metadata:
     labels:
       environment: dev
-    name: pub-ns-anots
+    name: gm4-ns-anots
     namespace: gm4
