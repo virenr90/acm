@@ -2,10 +2,10 @@
   kind: PubSubTopic
   metadata:
     annotations:
-    cnrm.cloud.google.com/organization-id: "808008667013"
+      cnrm.cloud.google.com/organization-id: "808008667013"
     labels:
       environment: dev
     name: org-ns-anots
-    project: "anthos-313604"
+    project: anthos-313604
     namespace: ns-org
    
