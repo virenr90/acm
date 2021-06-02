@@ -3,7 +3,7 @@
   metadata:
     annotations:
       cnrm.cloud.google.com/organization-id: "808008667013"
-    project: anthos-313604
+    project_id: anthos-313604
     labels:
       environment: dev
     name: org-ns-rs-anots
