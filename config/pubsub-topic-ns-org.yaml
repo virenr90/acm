@@ -4,6 +4,6 @@
     labels:
       environment: dev
     name: org-ns-anots
-    #organization-id: "808008667013"
+    organization-id: "808008667013"
     project-id: anthos-313604
     namespace: ns-org
