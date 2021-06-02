@@ -6,5 +6,6 @@
     labels:
       environment: dev
     name: org-ns-anots
-    namespace: ns-org
     project: anthos-313604
+    namespace: ns-org
+   
