@@ -4,5 +4,5 @@
     labels:
       environment: dev
     name: pub-org-anots
-    #project-id: anthos-313604
+    project-id: anthos-313604
     namespace: ns-org
