@@ -1,0 +1,4 @@
+[fetch]
+	recurseSubmodules = false
+[http "https://gitlab-dev.mavenwave.dev"]
+	sslCAInfo = /home/viren/VK/vkcloud/anthos/acm-git/builds/diuGmn19/0/virender.kumar/vk-mw-f5.tmp/CI_SERVER_TLS_CA_FILE

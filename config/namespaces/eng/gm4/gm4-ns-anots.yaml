@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  annotations:
-    cnrm.cloud.google.com/project-id: anthos-313604
+  #annotations:
+  #  cnrm.cloud.google.com/project-id: anthos-313604
   name: gm4
   labels:
     geo: test
