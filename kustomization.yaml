@@ -1,18 +1,18 @@
-resources:
-- base
-# - overlay
-# - legacy-resources
+# resources:
+# # - base
+# # - overlay
+# # - legacy-resources
 
 
-# helmCharts:
-# - name: namespace-helm-template
-#   repo: https://virenr90.github.io/helmchart/
-#   # repo: charts
+helmCharts:
+- name: namespace-helm-template
+  # repo: https://virenr90.github.io/helmchart/
+  # repo: charts
+  # version: v0.1.0
+  releaseName: helm
+  namespace: default
+# - name: cert-manager
+#   # repo: https://charts.jetstack.io
 #   # version: v0.1.0
-#   releaseName: helm
-#   # namespace: default
-# # - name: cert-manager
-# #   # repo: https://charts.jetstack.io
-# #   # version: v0.1.0
-# #   releaseName: my-cert-manager
-# #   namespace: cert-manager
+#   releaseName: my-cert-manager
+#   namespace: cert-manager
