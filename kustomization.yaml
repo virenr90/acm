@@ -21,12 +21,12 @@ resources:
 #   namespace: default
 
 helmCharts:
-- name: cert-manager
-  repo: https://charts.jetstack.io
-  version: v1.5.3
-  releaseName: my-cert-manager
-  namespace: cert-manager
-  
+# - name: cert-manager
+#   repo: https://charts.jetstack.io
+#   version: v1.5.3
+#   releaseName: my-cert-manager
+#   namespace: cert-manager
+
 - name: namespace-helm-template
   repo: https://virenr90.github.io/helmchart/
   # repo: charts
