@@ -3,15 +3,15 @@ resources:
 # - legacy-resources
 
 
-helmCharts:
-- name: namespace-helm-template
-  # repo: https://virenr90.github.io/helmchart/
-  # repo: charts
-  version: v0.1.0
-  releaseName: helm
-  namespace: dd
-- name: cert-manager
-  repo: https://charts.jetstack.io
-  version: v1.5.3
-  releaseName: my-cert-manager
-  namespace: cert-manager
+# helmCharts:
+# - name: namespace-helm-template
+#   # repo: https://virenr90.github.io/helmchart/
+#   # repo: charts
+#   version: v0.1.0
+#   releaseName: helm
+#   namespace: dd
+# - name: cert-manager
+#   repo: https://charts.jetstack.io
+#   version: v1.5.3
+#   releaseName: my-cert-manager
+#   namespace: cert-manager
