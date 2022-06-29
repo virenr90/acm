@@ -4,7 +4,7 @@ resources:
 
 helmCharts:
 - name: namespace-helm-template
-  # repo: https://virenr90.github.io/helmchart/
+  repo: https://virenr90.github.io/helmchart/
   # repo: charts
   version: v0.1.0
   releaseName: helm
