@@ -1,9 +1,3 @@
-# resources:
-# # - base
-# # - overlay
-# # - legacy-resources
-
-
 helmCharts:
 - name: namespace-helm-template
   # repo: https://virenr90.github.io/helmchart/
