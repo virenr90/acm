@@ -18,4 +18,4 @@ helmCharts:
   # repo: helmchart
   version: v0.1.0
   releaseName: ns-helm
-  namespace: bb
+  namespace: default
