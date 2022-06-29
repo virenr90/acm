@@ -11,11 +11,11 @@ resources:
 #   namespace: aa
 
 
-# # ./base/kustomization.yaml
-# helmCharts:
-# - name: namespace-helm-template
-#   # repo: https://virenr90.github.io/helmchart/
-#   # repo: helmchart
-#   version: v0.1.0
-#   releaseName: ns-helm
-#   namespace: default
+# ./base/kustomization.yaml
+helmCharts:
+- name: namespace-helm-template
+  repo: https://virenr90.github.io/helmchart/
+  # repo: helmchart
+  version: v0.1.0
+  releaseName: ns-helm
+  namespace: default
