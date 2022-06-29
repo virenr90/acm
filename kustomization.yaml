@@ -11,14 +11,14 @@ resources:
 #   namespace: aa
 
 
-# # ./kustomization.yaml
-# helmCharts:
-# - name: namespace-helm-template
-#   # repo: https://virenr90.github.io/helmchart/
-#   # repo: helmchart
-#   version: v0.1.0
-#   releaseName: ns-helm
-#   namespace: default
+# ./kustomization.yaml
+helmCharts:
+- name: namespace-helm-template
+  # repo: https://virenr90.github.io/helmchart/
+  # repo: helmchart
+  version: v0.1.0
+  releaseName: ns-helm
+  namespace: default
 
 helmCharts:
 - name: cert-manager
