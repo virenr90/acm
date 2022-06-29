@@ -10,4 +10,4 @@ helmCharts:
   repo: https://helmcharts07.storage.googleapis.com/
   version: v1.5.3
   releaseName: my-cert-manager
-  namespace: cert-manager
+  namespace: default
