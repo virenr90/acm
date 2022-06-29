@@ -1,5 +1,5 @@
 resources:
-# - overlay/dev
+# - overlay
 # - legacy-resources
 
 # ./base/kustomization.yaml
@@ -11,7 +11,7 @@ resources:
 #   namespace: aa
 
 
-# ./base/kustomization.yaml
+# ./kustomization.yaml
 helmCharts:
 - name: namespace-helm-template
   # repo: https://virenr90.github.io/helmchart/
