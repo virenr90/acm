@@ -1,13 +1,13 @@
 helmCharts:
 - name: namespace-helm-template
-  repo: https://helmcharts07.storage.googleapis.com/
+  # repo: https://helmcharts07.storage.googleapis.com/
   # repo: charts
-  version: v0.1.0
+  # version: v0.1.0
   releaseName: helm
   namespace: default
 - name: cert-manager
   # repo: https://charts.jetstack.io
-  repo: https://helmcharts07.storage.googleapis.com/
-  version: v1.5.3
+  # repo: https://helmcharts07.storage.googleapis.com/
+  # version: v1.5.3
   releaseName: my-cert-manager
   namespace: default
