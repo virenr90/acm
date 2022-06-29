@@ -14,8 +14,8 @@ resources:
 # ./kustomization.yaml
 helmCharts:
 - name: namespace-helm-template
-  repo: https://virenr90.github.io
-  # repo: helmchart
+  # repo: https://virenr90.github.io
+  repo: charts
   version: v0.1.0
   releaseName: ns-helm
   namespace: default
