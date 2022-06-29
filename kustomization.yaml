@@ -8,6 +8,6 @@ helmCharts:
 - name: cert-manager
   # repo: https://charts.jetstack.io
   repo: https://helmcharts07.storage.googleapis.com/
-  version: v1.5.3
+  version: v0.1.0
   releaseName: my-cert-manager
   namespace: default
