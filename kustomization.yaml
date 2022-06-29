@@ -2,7 +2,7 @@ resources:
 # - overlay
 # - legacy-resources
 
-...
+
 helmCharts:
 - name: namespace-helm-template
   repo: https://virenr90.github.io/helmchart/
@@ -15,4 +15,3 @@ helmCharts:
   version: v1.5.3
   releaseName: my-cert-manager
   namespace: cert-manager
-...
