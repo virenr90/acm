@@ -1,4 +1,5 @@
 apiVersion: v2
+kind: 
 description: A Helm chart for Kubernetes namespaces
 name: namespace-helm-template
 type: application
