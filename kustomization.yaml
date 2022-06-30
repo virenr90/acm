@@ -5,9 +5,9 @@ helmCharts:
   # version: v0.1.0
   releaseName: helm
   namespace: default
-- name: cert-manager
-  # repo: https://charts.jetstack.io
-  # repo: https://helmcharts07.storage.googleapis.com/
-  # version: v0.1.0
-  releaseName: my-cert-manager
-  namespace: default
+# - name: cert-manager
+#   # repo: https://charts.jetstack.io
+#   # repo: https://helmcharts07.storage.googleapis.com/
+#   # version: v0.1.0
+#   releaseName: my-cert-manager
+#   namespace: default
