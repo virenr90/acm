@@ -3,7 +3,7 @@ helmCharts:
   # repo: https://helmcharts07.storage.googleapis.com/
   # version: v0.1.0
   releaseName: helm
-  namespace: test
+  namespace: default
 # - name: cert-manager
 #   repo: https://charts.jetstack.io
 #   # repo: https://helmcharts07.storage.googleapis.com/
