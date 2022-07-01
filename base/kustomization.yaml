@@ -7,6 +7,6 @@ helmCharts:
 #   namespace: cert-manager
 - name: namespace-helm-template
   repo: https://helmcharts07.storage.googleapis.com/
-  version: v0.1.0
+  # version: v0.1.0
   releaseName: helm
   namespace: default
