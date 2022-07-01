@@ -1,24 +1,22 @@
-apiVersion: v2
+annotations:
+  artifacthub.io/prerelease: "false"
+  artifacthub.io/signKey: |
+    fingerprint: 1020CF3C033D4F35BAE1C19E1226061C665DF13E
+    url: https://cert-manager.io/public-keys/cert-manager-keyring-2021-09-20-1020CF3C033D4F35BAE1C19E1226061C665DF13E.gpg
+apiVersion: v1
+appVersion: v1.8.2
+description: A Helm chart for cert-manager
+home: https://github.com/cert-manager/cert-manager
+icon: https://raw.githubusercontent.com/cert-manager/cert-manager/master/logo/logo.png
+keywords:
+- cert-manager
+- kube-lego
+- letsencrypt
+- tls
+maintainers:
+- email: cert-manager-maintainers@googlegroups.com
+  name: cert-manager-maintainers
 name: cert-manager
-description: A Helm chart for Kubernetes
-
-# A chart can be either an 'application' or a 'library' chart.
-#
-# Application charts are a collection of templates that can be packaged into versioned archives
-# to be deployed.
-#
-# Library charts provide useful utilities or functions for the chart developer. They're included as
-# a dependency of application charts to inject those utilities and functions into the rendering
-# pipeline. Library charts do not define any templates and therefore cannot be deployed.
-type: application
-
-# This is the chart version. This version number should be incremented each time you make changes
-# to the chart and its templates, including the app version.
-# Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.1.0
-
-# This is the version number of the application being deployed. This version number should be
-# incremented each time you make changes to the application. Versions are not expected to
-# follow Semantic Versioning. They should reflect the version the application is using.
-# It is recommended to use it with quotes.
-appVersion: "1.16.0"
+sources:
+- https://github.com/cert-manager/cert-manager
+version: v1.8.2
