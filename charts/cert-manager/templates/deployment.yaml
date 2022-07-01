@@ -15,7 +15,7 @@ spec:
     metadata:
       {{- with .Values.podAnnotations }}
       annotations:
-        {{- toYaml . | nindent 8 }}
+        # {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
         {{- include "cert-manager.selectorLabels" . | nindent 8 }}
