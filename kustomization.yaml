@@ -1,18 +1,18 @@
-# resources:
-# - base
+resources:
+- base
 
 
 
-helmCharts:
-# - name: namespace-helm-template
+# helmCharts:
+# # - name: namespace-helm-template
+# #   # repo: https://helmcharts07.storage.googleapis.com/
+# #   # repo: charts
+# #   # version: v0.1.0
+# #   releaseName: helm
+# #   namespace: default
+# - name: cert-manager
+#   # repo: https://charts.jetstack.io
 #   # repo: https://helmcharts07.storage.googleapis.com/
-#   # repo: charts
 #   # version: v0.1.0
-#   releaseName: helm
-#   namespace: default
-- name: cert-manager
-  # repo: https://charts.jetstack.io
-  # repo: https://helmcharts07.storage.googleapis.com/
-  # version: v0.1.0
-  releaseName: my-cert-manager
-  namespace: cert-manager
+#   releaseName: my-cert-manager
+#   namespace: cert-manager
