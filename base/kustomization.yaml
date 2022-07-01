@@ -1,7 +1,3 @@
-resources:
-- base
-
-
 helmCharts:
 # - name: namespace-helm-template
 #   # repo: https://helmcharts07.storage.googleapis.com/
