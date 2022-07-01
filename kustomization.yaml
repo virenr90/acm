@@ -1,9 +1,9 @@
-resources:
-- base
+# resources:
+# - base
 
 
 
-# helmCharts:
+helmCharts:
 # - name: namespace-helm-template
 #   # repo: https://helmcharts07.storage.googleapis.com/
 #   # repo: charts
