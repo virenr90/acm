@@ -1,0 +1,13 @@
+environments:
+ - name: sb
+   environment: sandbox
+   labels:
+    istio.io/rev: asm-1125-07
+
+applications:
+ - name: vehicle-search
+   cluster-name-prefix: gke-vk-core
+   labels:
+    some-label: somevalue
+ - name: address-search
+   cluster-name-prefix: gke-vk-core
