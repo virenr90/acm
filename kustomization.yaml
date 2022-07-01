@@ -14,5 +14,5 @@ helmCharts:
   # repo: https://charts.jetstack.io
   # repo: https://helmcharts07.storage.googleapis.com/
   # version: v0.1.0
-  releaseName: my-cert-manager
-  namespace: cert-manager
+    releaseName: my-cert-manager
+    namespace: cert-manager
