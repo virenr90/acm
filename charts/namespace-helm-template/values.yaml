@@ -13,5 +13,5 @@ applications:
 #    cluster-name-prefix: gke-vk-core
 
  - name: ksa
-   cluster-name-prefix: gke-gw-core
+   cluster-name-prefix: gke-test-1
    gcp-service-account: workload
