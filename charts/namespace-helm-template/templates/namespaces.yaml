@@ -9,7 +9,7 @@ kind: Namespace
 metadata:
   name: {{ $environment.name }}-{{ $application.name }}
   annotations:
-    configsync.gke.io/cluster-name-selector: {{ index $application "cluster-name-prefix" }}-{{ $environment.environment }}
+    configsync.gke.io/cluster-name-selector: {{ index $application "cluster-name-prefix" }}
     gcp-service-account: {{ index $application "gcp-service-account" }}
   labels:
     {{- range $key, $val := $environment.labels }}
