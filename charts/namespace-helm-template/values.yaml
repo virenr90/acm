@@ -5,9 +5,13 @@ environments:
     istio.io/rev: asm-1125-07
 
 applications:
- - name: vehicle-search
-   cluster-name-prefix: gke-vk-core
-   labels:
-    some-label: somevalue
- - name: address-search
-   cluster-name-prefix: gke-vk-core
+#  - name: vehicle-search
+#    cluster-name-prefix: gke-vk-core
+#    labels:
+#     some-label: somevalue
+#  - name: address-search
+#    cluster-name-prefix: gke-vk-core
+
+ - name: ksa
+   cluster-name-prefix: gke-gw-core
+   gcp-service-account: workload
