@@ -7,7 +7,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: {{ $environment.name }}-{{ $application.name }}
+  name: ksa-cert
   annotations:
     configsync.gke.io/cluster-name-selector: {{ index $application "cluster-name-prefix" }}
     gcp-service-account: {{ index $application "gcp-service-account" }}
